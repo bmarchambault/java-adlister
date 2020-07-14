@@ -12,5 +12,9 @@
 </head>
 <body>
 <h1> this is your profile page</h1>
+
+<%--the following are the same way.  each retrieve from the home.jsp.  the ${} is the way to use experssion language--%>
+<h3> Hi, <%=request.getParameter("username")%></h3>
+<h3> Hi, ${param.username}</h3>
 </body>
 </html>
