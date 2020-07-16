@@ -5,9 +5,13 @@
   Time: 2:11 PM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%! int myNumber = 1; %>
 <% request.setAttribute("number", 12);%>
+<%--to use the above set attribute, you add the following into the body:  <h3>(or any tag) ${number} (or attribute name) </h3>
+set attributes are supposed to be on the servlet.  you can set a title as an attribute, for example.  this helps us separate
+things out and your page is created dynamically. --%>
 <html>
 <head>
     <title>Home Page</title>
