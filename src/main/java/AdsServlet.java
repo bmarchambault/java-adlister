@@ -10,6 +10,8 @@ public class AdsServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("../webapp/ads/index.jsp").forward(req, resp);
+//        Use the all method on the ListAdsDao class to get a listing of all the ads, and pass this on to your jsp file
+        req.setAttribute("ads", DaoFactory.getAdsDao().all());
+        req.getRequestDispatcher("/ads/index.jsp").forward(req, resp);
     }
 }
