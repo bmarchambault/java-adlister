@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--<%--%>
+<%--MOVE THIS TO A LOGINSERVLET.  USE A DO POST.
 <%--    if (request.getMethod().equalsIgnoreCase("post")) {--%>
 <%--        String username = request.getParameter("username");--%>
 <%--        String password = request.getParameter("password");--%>
@@ -18,8 +19,8 @@
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">
         <h1>Please Log In</h1>
-<%--        this form is submitting a post request to the profile.jsp--%>
-        <form action="/profile" method="POST">
+<%--        this form is submitting a post request to the /login  it sends the values (go to login servlet)--%>
+        <form action="/login" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
