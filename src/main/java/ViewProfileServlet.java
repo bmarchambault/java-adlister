@@ -8,6 +8,14 @@ import java.io.IOException;
 @WebServlet(name = "ViewProfileServlet", urlPatterns = "/profile")
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/profile.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }
 }
+//    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        HttpSession session = request.getSession();
+//
+//        if(session.getAttribute("font-color") == null && session.getAttribute("background-color") == null){
+//            session.setAttribute("font-color", "pink");
+//            session.setAttribute("background-color","blue");
+//        }
+//        request.getRequestDispatcher("/profile.jsp").forward(request, response);
