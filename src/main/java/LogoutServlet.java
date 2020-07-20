@@ -11,27 +11,16 @@ import java.io.IOException;
 
 @WebServlet(name = "LogoutServlet", urlPatterns = "/logout")
 public class LogoutServlet extends HttpServlet {
-//    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-//        request.getSession().removeAttribute("user");
-//        request.getSession().invalidate();
-//        response.sendRedirect("/login");
-//    }
-//}
-////
-//    @WebServlet(name = "LogoutServlet", urlPatterns = "/logout")
-//    public class LogoutServlet extends HttpServlet {
+
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            request.getRequestDispatcher("/WEB-INF/logout.jsp").forward(request, response);
-        }
-//
-        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
             request.getSession().removeAttribute("user");
             request.getSession().invalidate();
             response.sendRedirect("/login");
         }
-}
-//            HttpSession session = request.getSession();
-//                session.removeAttribute("isAdmin");
-//                response.sendRedirect("/login");
-//            }
+////
+//        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+//            request.getSession().removeAttribute("user");
+//            request.getSession().invalidate();
+//            response.sendRedirect("/login");
 //        }
+}

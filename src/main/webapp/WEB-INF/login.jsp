@@ -9,6 +9,7 @@
     <jsp:include page="../WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <h1>Please Log In</h1>
+<%--        if this was a GET method, the form would be handled in the doGet of the servlet.  --%>
         <form action="/login" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
@@ -21,5 +22,6 @@
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
         </form>
     </div>
+
 </body>
 </html>
